@@ -111,6 +111,7 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.png" type="image/png" />
         <meta name="robots" content="index, follow" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
       </head>
       <body
         className={`${montserrat.className} bg-gradient-to-b from-[#111827] via-[#0B111F] to-black antialiased`}
