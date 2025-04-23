@@ -1,16 +1,26 @@
-
 'use client';
 
 import React, {useState} from 'react';
 import NavigationLink from './NavigationLink';
-import {RiMenuLine as FaBars, RiCloseLine as FaTimes} from '@remixicon/react';
+import {RiMenuLine as FaBars, RiCloseLine as FaTimes, RiUserLine} from '@remixicon/react';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 import {Button} from './ui/button';
 import LangSwitcher from "./LangSwitcher"
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '@/store/store';
+import { logout } from '@/store/slices/authSlice';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dispatch = useDispatch();
+  const { isAuthenticated, user } = useSelector((state: RootState) => state.auth);
 
   const toggleMenu = () => {
     const newState = !isMenuOpen;
@@ -21,6 +31,11 @@ const Navbar = () => {
   const closeMenuOnNavigate = () => {
     setIsMenuOpen(false);
     Cookies.set('navbarMobileMenuOpen', 'false', {expires: 1});
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+    closeMenuOnNavigate();
   };
 
   return (
@@ -46,8 +61,35 @@ const Navbar = () => {
           </nav>
         </div>
 
-        <div className="hidden md:flex flex-shrink-0">
+        <div className="hidden md:flex items-center space-x-4">
           <LangSwitcher />
+          {isAuthenticated ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                  {user?.avatar ? (
+                    <Image
+                      src={user.avatar}
+                      alt={user.name}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  ) : (
+                    <RiUserLine className="h-5 w-5" />
+                  )}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={handleLogout}>
+                  Logout
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <NavigationLink href="/login">
+              <Button variant="outline">Login</Button>
+            </NavigationLink>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -60,10 +102,19 @@ const Navbar = () => {
         </Button>
       </div>
 
-      {/* Menú móvil */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="md:hidden bg-black text-white p-4 animate-slide-down flex flex-col items-center justify-center min-h-screen space-y-4">
           <LangSwitcher />
+          {isAuthenticated ? (
+            <Button variant="outline" onClick={handleLogout}>
+              Logout
+            </Button>
+          ) : (
+            <NavigationLink href="/login" onClick={closeMenuOnNavigate}>
+              <Button variant="outline">Login</Button>
+            </NavigationLink>
+          )}
         </nav>
       )}
     </header>

@@ -6,20 +6,20 @@ import { courses } from '@/data/courses';
 import { Course } from '@/types/course';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { useFavorites } from '@/hooks/useFavorites';
+import { LoginModal } from '@/components/LoginModal';
+import { RiHeartLine, RiHeartFill } from '@remixicon/react';
 
 export default function CourseDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
   const [course, setCourse] = useState<Course | undefined>(
     courses.find(c => c.id === resolvedParams.id)
   );
+  const { handleToggleFavorite, isFavorite, showLoginModal, setShowLoginModal } = useFavorites();
 
   if (!course) {
     return <div className="text-white">Course not found</div>;
   }
-
-  const handleToggleFavorite = () => {
-    setCourse(prev => prev ? { ...prev, isFavorite: !prev.isFavorite } : undefined);
-  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -84,12 +84,14 @@ export default function CourseDetailPage({ params }: { params: Promise<{ id: str
             <Button
               variant="outline"
               className="w-full border-gray-600 text-gray-300 hover:bg-gray-700"
-              onClick={handleToggleFavorite}
+              onClick={() => handleToggleFavorite(course.id)}
             >
-              <i className={`ri-heart-${course.isFavorite ? 'fill' : 'line'} mr-2 text-xl ${
-                course.isFavorite ? 'text-red-500' : 'text-gray-300'
-              }`}></i>
-              {course.isFavorite ? 'Remove from Wishlist' : 'Add to Wishlist'}
+              {isFavorite(course.id) ? (
+                <RiHeartFill className="mr-2 text-xl text-red-500" />
+              ) : (
+                <RiHeartLine className="mr-2 text-xl text-gray-300" />
+              )}
+              {isFavorite(course.id) ? 'Remove from Wishlist' : 'Add to Wishlist'}
             </Button>
             
             <div className="mt-6 space-y-4">
@@ -113,6 +115,8 @@ export default function CourseDetailPage({ params }: { params: Promise<{ id: str
           </div>
         </div>
       </div>
+
+      <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
     </div>
   );
 } 
