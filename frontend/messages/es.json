@@ -1,0 +1,224 @@
+{
+  "Metadata": {
+    "title": "Colombian Market Solutions",
+    "description": "Nos especializamos en conectarte con el mercado colombiano. Nuestros servicios cubren todo lo que necesitas para crecer y tener éxito en Colombia. Caminamos contigo en cada paso del proceso, asegurándonos de que te sientas acompañado durante todo el trayecto. Ya sea que estés abriendo una empresa o introduciendo un producto o servicio, ayudamos tanto a empresas extranjeras como locales a establecerse, operar y crecer. Con nosotros, ahorras tiempo y eliminas el estrés de manejar cada detalle, ya que gestionamos todo de manera eficiente y segura, desde el cumplimiento legal y la logística hasta el marketing y la gestión financiera, garantizando una entrada al mercado exitosa y sin contratiempos.",
+    "keywords": {
+      "1": "¿Cómo puedo llevar mi producto o marca a Colombia?",
+      "2": "¿Cómo manejo los impuestos y regulaciones para mi producto y marca en Colombia?",
+      "3": "¿Cuáles son los pasos para que mi producto y marca sean aprobados legalmente en Colombia?",
+      "4": "¿Cómo importo mi producto y registro mi marca en Colombia?",
+      "5": "¿Cómo obtengo la aprobación del INVIMA para mi producto y registro de mi marca en Colombia?",
+      "6": "¿Qué permisos necesito para vender mi producto y establecer mi marca en Colombia?",
+      "7": "¿Cómo inicio un negocio para vender mi producto y hacer crecer mi marca en Colombia?",
+      "8": "¿Cuáles son los requisitos legales para exportar mi producto y proteger mi marca en Colombia?",
+      "9": "¿Cómo obtengo la aprobación de mi producto y el reconocimiento de mi marca en Colombia?",
+      "10": "¿Quién puede ayudarme a establecer mi negocio para vender mi producto y promover mi marca en Colombia?",
+      "11": "¿Cómo encuentro distribuidores para mi producto y construyo mi marca en Colombia?",
+      "12": "¿Cuál es el proceso para obtener el registro de mi marca y vender mi producto en Colombia?",
+      "13": "¿Cómo puedo comercializar mi producto y aumentar el reconocimiento de mi marca en Colombia?",
+      "14": "¿Cómo creo un sitio web para vender mi producto y mostrar mi marca en Colombia?",
+      "15": "¿Cuáles son las mejores estrategias de marketing digital para mi producto y marca en Colombia?"
+    },
+    "openGraph": {
+      "title": "Soluciones para el Mercado Colombiano | Expansión de Negocios y Estrategia de Mercado",
+      "description": "Aprovecha nuevas oportunidades en Colombia con consultoría empresarial experta y desarrollo de software a medida. Brindamos soluciones estratégicas para la entrada al mercado, orientación en inversiones y transformación digital, asegurando tu éxito en Colombia y América Latina.",
+      "altImage": "Representación visual de conexiones empresariales y expansión de mercado en Colombia",
+      "twitterDescription": "Expande tu negocio en Colombia con consultoría experta y soluciones digitales. Ayudamos a las empresas a escalar de manera eficiente en el mercado latinoamericano."
+    }
+  },
+  "Whatsapp": {
+    "message": "¡Hola! ¿Estás pensando llevar tu empresa a Colombia? En Colombian Market Solutions, te ayudamos a ingresar al mercado colombiano con consultoría estratégica, procesos regulatorios como aprobaciones INVIMA y registro de marca. ¿Listo para expandir tu negocio? ¡Conversemos!"
+  },
+  "noData": {
+    "noData": "No hay datos para mostrar"
+  },
+  "Dashboard": {
+    "beInSection": "Estás en la sección de:",
+    "closeMenu": "cerrar",
+    "openMenu": "abrir",
+    "Sidebar": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "blog": "Blog",
+      "about": "Acerca de"
+    },
+    "Section": {
+      "/dashboard": "Inicio",
+      "/dashboard/about": "Acerca de",
+      "/dashboard/services": "Servicios",
+      "/dashboard/blog": "Blog"
+    },
+    "home": {
+      "title": "Contenido de Inicio",
+      "errors": {
+        "titleRequired": "El título es obligatorio",
+        "descriptionRequired": "La descripción es obligatoria",
+        "imageRequired": "La imagen es obligatoria",
+        "imageSize": "El tamaño máximo de la imagen es 5MB.",
+        "imageFormat": "Solo se admiten formatos .jpg, .jpeg, .png y .webp.",
+        "serviceCardRequired": "Se requiere al menos una tarjeta de servicio"
+      }
+    },
+    "about": {
+      "title": "Contenido Acerca de",
+      "errors": {
+        "titleRequired": "El título es obligatorio",
+        "descriptionRequired": "La descripción es obligatoria",
+        "aboutRequired": "Se requiere al menos un blog",
+        "imageRequired": "La imagen es obligatoria",
+        "imageSize": "El tamaño máximo de la imagen es 5MB.",
+        "imageFormat": "Solo se admiten formatos .jpeg, .jpg, .png, .webp, .gif, .svg, y .ico."
+      }
+    },
+    "service": {
+      "title": "Contenido de Servicio",
+      "errors": {
+        "titleRequired": "El título es obligatorio",
+        "descriptionRequired": "La descripción es obligatoria",
+        "itemsRequired": "Se requiere al menos un item",
+        "itemRequired": "Items es requerido",
+        "imageSize": "El tamaño máximo de la imagen es 5MB.",
+        "imageFormat": "Solo se admiten formatos .jpeg, .jpg, .png, .webp, .gif, .svg, y .ico.",
+        "serviceRequired": "Se requiere al menos un servicio"
+      }
+    },
+    "blog": {
+      "title": "Contenido del Blog",
+      "readLess": "Leer menos",
+      "errors": {
+        "titleRequired": "El título es obligatorio",
+        "descriptionRequired": "La descripción es obligatoria",
+        "imageRequired": "La imagen es obligatoria",
+        "imageSize": "El tamaño máximo de la imagen es 5MB.",
+        "imageFormat": "Solo se admiten formatos .jpg, .jpeg, .png y .webp.",
+        "blogRequired": "Se requiere al menos un blog"
+      }
+    }
+  },
+  "Home": {
+    "errorLoading": "Algo salió mal. Por favor, espera.",
+    "loading": "Cargando...",
+    "buttons": {
+      "contact": "Contáctanos",
+      "explore": "Explorar"
+    },
+    "footer": {
+      "support": "Soporte disponible en inglés y español. ¿No hablas español? No hay problema, te guiaremos."
+    }
+  },
+  "About": {
+    "errorLoading": "Algo salió mal. Por favor, espera.",
+    "loading": "Cargando...",
+    "aboutTitle": "Sobre Nosotros",
+    "missionTitle": "Misión"
+  },
+  "Services": {
+    "errorLoading": "Algo salió mal. Por favor, espera.",
+    "loading": "Cargando...",
+    "title": "Nuestros Servicios",
+    "noData": "No hay datos disponibles",
+    "contact": {
+      "text": "¿Buscas expandir tu negocio en Colombia o mejorar tu presencia digital? <contactLink>Comunícate con nuestro equipo</contactLink> y descubre soluciones personalizadas diseñadas para acelerar tu crecimiento.",
+      "contactLinkText": "Contáctanos"
+    },
+    "readMore": "Leer más",
+    "readLess": "Leer menos"
+  },
+  "Blog": {
+    "errorLoading": "Algo salió mal. Por favor, espera.",
+    "loading": "Cargando...",
+    "pageTitle": "Blog / Recursos",
+    "noData": "No hay datos disponibles",
+    "readMore": "Leer más",
+    "readLess": "Leer menos"
+  },
+  "Menu": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "blog": "Blog",
+    "faq": "Preguntas Frecuentes"
+  },
+  "LocaleSwitcher": {
+    "label": "Cambiar idioma",
+    "locale": "{locale, select, es {🇨🇴 Español} en {🇺🇸 Inglés} other {Desconocido}}"
+  },
+  "Contact": {
+    "fullName": "El nombre completo debe tener al menos 3 caracteres",
+    "email": "Dirección de correo electrónico no válida",
+    "phone": "Número de teléfono no válido",
+    "subject": "El asunto debe tener al menos 3 caracteres",
+    "message": "El mensaje debe tener al menos 10 caracteres",
+    "formTitle": "Contáctenos",
+    "sendButton": "Enviar",
+    "sendingButton": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "placeholders": {
+      "fullName": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje"
+    }
+  },
+  "NotFoundPage": {
+    "description": "Por favor, verifica la barra de direcciones del navegador o usa la navegación del menú para ir a una página conocida.",
+    "title": "Página no encontrada"
+  },
+  "Footer": {
+    "home": "Inicio",
+    "copyright": "© {year} Colombian Market Solutions",
+    "poweredBy": "Desarrollado por Infinity Dev",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos del Servicio",
+    "contact": "Contacto"
+  },
+  "Privacy": {
+    "title": "Política de Privacidad",
+    "intro": "En Colombian Market Solutions, valoramos y protegemos la privacidad de su información. Esta política explica qué datos recopilamos, por qué los recopilamos y cómo los utilizamos.",
+    "sections": {
+      "information": {
+        "title": "Información que Recopilamos",
+        "content": "Recopilamos información que usted proporciona directamente, como su nombre, datos de contacto e información sobre su empresa o proyecto. También podemos recopilar información sobre cómo interactúa con nuestros servicios y sitio web."
+      },
+      "purpose": {
+        "title": "Por Qué Recopilamos Esta Información",
+        "content": [
+          "Para brindar nuestros servicios de consultoría de manera efectiva.",
+          "Para personalizar nuestras recomendaciones y soluciones para su negocio.",
+          "Para comunicarnos con usted sobre proyectos, actualizaciones y noticias relevantes.",
+          "Para mejorar nuestros servicios y comprender mejor las necesidades de nuestros clientes."
+        ]
+      },
+      "privacyOptions": {
+        "title": "Sus Opciones de Privacidad",
+        "content": [
+          "<b>Acceso y Actualización</b>: Puede acceder y actualizar su información en cualquier momento contactándonos directamente.",
+          "<b>Comunicaciones</b>: Puede elegir qué tipo de comunicaciones desea recibir de nosotros (por ejemplo, boletines informativos, actualizaciones de proyectos)."
+        ]
+      },
+      "sharing": {
+        "title": "Cómo Compartimos su Información",
+        "content": "No compartimos su información personal con terceros, excepto cuando sea necesario para brindar nuestros servicios (por ejemplo, con contratistas que hayan firmado acuerdos de confidencialidad) o cuando lo exija la ley."
+      },
+      "security": {
+        "title": "Seguridad de la Información",
+        "content": "Implementamos medidas de seguridad sólidas para proteger su información contra accesos no autorizados, modificaciones o divulgaciones."
+      },
+      "changes": {
+        "title": "Cambios en Esta Política",
+        "content": "Podemos actualizar esta política de privacidad periódicamente. Le notificaremos sobre cualquier cambio significativo."
+      },
+      "contact": {
+        "title": "Contáctenos",
+        "content": "Si tiene preguntas sobre esta política de privacidad, no dude en contactarnos."
+      },
+      "additionalInfo": {
+        "title": "Información Adicional",
+        "content": [
+          "<b>Sitio Web</b>: <a href='https://colombianmarketsolutions.com' target='_blank' rel='noopener noreferrer'>https://colombianmarketsolutions.com</a>"
+        ]
+      }
+    }
+  }
+}

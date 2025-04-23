@@ -1,0 +1,161 @@
+{
+  "Metadata": {
+    "title": "Leanrning app",
+    "description": "Learning app",
+ "keywords": {
+  "1": "How can I improve my skills through an online education platform?",
+  "2": "How do I choose the right online learning platform?"
+},
+    "openGraph": {
+      "description": "Learning app",
+      "altImage": "Learning app",
+      "twitterDescription": "Learning app"
+    }
+  },
+  "Whatsapp": {
+    "message": "Learning app"
+  },
+  "noData": {
+    "noData": "No data available"
+  },
+  "Dashboard": {
+    "beInSection": "You’re in the section:",
+    "closeMenu": "close",
+    "openMenu": "open",
+    "Sidebar": {
+      "home": "Home",
+      "services": "Services",
+      "blog": "Blog",
+      "about": "About"
+    },
+    "Section": {
+      "/dashboard": "Home",
+      "/dashboard/about": "About",
+      "/dashboard/services": "Services",
+      "/dashboard/blog": "Blog"
+    },
+    "home": {
+      "title": "Home Content",
+      "errors": {
+        "titleRequired": "Title is required",
+        "descriptionRequired": "Description is required",
+        "imageRequired": "Image is required",
+        "imageSize": "Max image size is 5MB.",
+        "imageFormat": "Only .jpeg, .jpg, .png, .webp, .gif, .svg, and .ico formats are supported.",
+        "serviceCardRequired": "At least one service card is required"
+      }
+    },
+    "about": {
+      "title": "About Content",
+      "errors": {
+        "titleRequired": "Title is required",
+        "descriptionRequired": "Description is required",
+        "aboutRequired": "At least one about is required",
+        "imageRequired": "Image is required",
+        "imageSize": "Max image size is 5MB.",
+        "imageFormat": "Only .jpeg, .jpg, .png, .webp, .gif, .svg, and .ico formats are supported."
+      }
+    },
+    "service": {
+      "title": "Service Content",
+      "errors": {
+        "titleRequired": "Title is required",
+        "descriptionRequired": "Description is required",
+        "itemsRequired": "At least one item is required",
+        "itemRequired": "item is required",
+        "imageSize": "Max image size is 5MB.",
+        "imageFormat": "Only .jpg, .jpeg, .png and .webp formats are supported.",
+        "serviceRequired": "At least one service is required"
+      }
+    },
+    "blog": {
+      "title": "Blog Content",
+      "errors": {
+        "titleRequired": "Title is required",
+        "descriptionRequired": "Description is required",
+        "imageRequired": "Image is required",
+        "imageSize": "Max image size is 5MB.",
+        "imageFormat": "Only .jpg, .jpeg, .png and .webp formats are supported.",
+        "blogRequired": "At least one blog is required"
+      }
+    }
+  },
+  "Home": {
+    "errorLoading": "Something went wrong. Please wait.",
+    "loading": "Loading...",
+    "buttons": {
+      "contact": "Contact Us",
+      "explore": "Explore"
+    },
+    "footer": {
+      "support": "Support available in English and Spanish. Don't speak Spanish? No problem, we'll guide you."
+    }
+  },
+  "About": {
+    "errorLoading": "Something went wrong. Please wait.",
+    "loading": "Loading...",
+    "aboutTitle": "About",
+    "missionTitle": "Mission"
+  },
+  "Services": {
+    "errorLoading": "Something went wrong. Please wait.",
+    "loading": "Loading...",
+    "title": "Our Services",
+    "noData": "No data available",
+    "contact": {
+      "text": "Looking to expand your business in Colombia or enhance your digital presence? <contactLink>Reach out to our team</contactLink> and discover bespoke solutions designed to accelerate your growth.",
+      "contactLinkText": "Contact Us"
+    },
+    "readMore": "Read More",
+    "readLess": "Read Less"
+  },
+  "Blog": {
+    "errorLoading": "Something went wrong. Please wait.",
+    "loading": "Loading...",
+    "pageTitle": "Blog / Resources",
+    "noData": "No data available",
+    "readMore": "Read More",
+    "readLess": "Read Less"
+  },
+  "Menu": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "services": "Services",
+    "blog": "Blog",
+    "faq": "FAQs"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {🇨🇴 Spanish} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Contact": {
+    "fullName": "Full name must be at least 3 characters",
+    "email": "Invalid email address",
+    "phone": "Invalid phone number",
+    "subject": "Subject must be at least 3 characters",
+    "message": "Message must be at least 10 characters",
+    "formTitle": "Get in Touch",
+    "sendButton": "Send",
+    "sendingButton": "Sending...",
+    "success": "Message sent successfully!",
+    "placeholders": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message"
+    }
+  },
+  "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found"
+  },
+  "Footer": {
+    "home": "Home",
+    "copyright": "© {year} Colombian Market Solutions",
+    "poweredBy": "Powered by Infinity Dev",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact"
+  }
+}
