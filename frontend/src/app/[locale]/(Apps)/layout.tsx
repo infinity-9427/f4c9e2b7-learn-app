@@ -23,16 +23,16 @@ type LocaleLayoutProps = {
 export async function generateMetadata(props: Omit<LocaleLayoutProps, 'children'>) {
   const {locale} = await props.params;
 
-  const imageUrl = 'https://colombianmarketsolutions.com/opengraph-image.png';
-  const siteUrl = 'https://colombianmarketsolutions.com';
+  const imageUrl = '/courses-logo.webp';
+  const siteUrl = 'https://somosnoa.com';
 
   const messages = await getMessages();
   const t = createTranslator({locale, messages});
 
   return {
     metadataBase: new URL(siteUrl),
-    authors: [{name: 'Tatiana Velasco, MBA', url: siteUrl}],
-    creator: 'Colombian Market Solutions',
+    authors: [{name: 'Jorge Tarifa', url: siteUrl}],
+    creator: 'Jorge Tarifa',
     icons: {
       icon: '/favicon.ico'
     },
@@ -41,7 +41,7 @@ export async function generateMetadata(props: Omit<LocaleLayoutProps, 'children'
       locale: locale || 'es_CO',
       url: siteUrl,
       description: t('Metadata.openGraph.description'),
-      siteName: 'Colombian Market Solutions',
+      siteName: 'Somos Noa',
       images: [
         {
           url: imageUrl,
@@ -53,8 +53,8 @@ export async function generateMetadata(props: Omit<LocaleLayoutProps, 'children'
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@ColombianMarketSolutions',
-      creator: '@TatianaVelascoMBA',
+      site: '@SomosNoa',
+      creator: '@JorgeTarifa',
       description: t('Metadata.openGraph.twitterDescription'),
       images: [imageUrl]
     }
@@ -82,8 +82,8 @@ export default async function RootLayout({
   const keywordsArray = keywordKeys.map((key) => t(`Metadata.keywords.${key}`));
   const keywordsString = keywordsArray.join(', ');
 
-  const siteUrl = 'https://colombianmarketsolutions.com';
-  const imageUrl = 'https://colombianmarketsolutions.com/opengraph-image.png';
+  const siteUrl = 'https://somosnoa.com';
+  const imageUrl = '/courses-logo.webp';
 
   setRequestLocale(locale);
 
@@ -103,10 +103,10 @@ export default async function RootLayout({
         <meta property="og:locale" content={locale} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={imageUrl} />
-        <link rel="canonical" href="https://colombianmarketsolutions.com" />
+        <link rel="canonical" href="https://somosnoa.com" />
         <meta
           property="og:image"
-          content="https://colombianmarketsolutions.com/favicon.png"
+          content="https://somosnoa.com/favicon.png"
         />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.png" type="image/png" />

@@ -2,7 +2,6 @@
 'use client';
 
 import React, {useState} from 'react';
-import {Menu} from '../utils/Menu';
 import NavigationLink from './NavigationLink';
 import {RiMenuLine as FaBars, RiCloseLine as FaTimes} from '@remixicon/react';
 import Cookies from 'js-cookie';
@@ -11,7 +10,6 @@ import {Button} from './ui/button';
 import LangSwitcher from "./LangSwitcher"
 
 const Navbar = () => {
-  const menuOptions = Menu();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,7 +29,7 @@ const Navbar = () => {
         <div className="flex-shrink-0 p-3 rounded-md">
           <NavigationLink href="/" onClick={closeMenuOnNavigate}>
             <Image
-              src="/logo-landing-2.webp"
+              src="/courses-logo.webp"
               alt="logo"
               width={1200}
               height={800}
@@ -45,15 +43,6 @@ const Navbar = () => {
         {/* Navigation (Centered) */}
         <div className="flex-1 flex justify-center">
           <nav className="hidden md:flex space-x-8">
-            {menuOptions.map((option, index) => (
-              <NavigationLink
-                key={index}
-                href={option.path}
-                className="px-3 py-2 rounded transition-all duration-300 ease-in-out font-semibold text-gray-300 hover:text-indigo-500"
-              >
-                {option.item}
-              </NavigationLink>
-            ))}
           </nav>
         </div>
 
@@ -74,16 +63,6 @@ const Navbar = () => {
       {/* Menú móvil */}
       {isMenuOpen && (
         <nav className="md:hidden bg-black text-white p-4 animate-slide-down flex flex-col items-center justify-center min-h-screen space-y-4">
-          {menuOptions.map((option, index) => (
-            <NavigationLink
-              key={index}
-              href={option.path}
-              onClick={closeMenuOnNavigate}
-              className="block px-4 py-2 rounded transition-all duration-300 ease-in-out font-semibold text-gray-300 hover:text-indigo-500"
-            >
-              {option.item}
-            </NavigationLink>
-          ))}
           <LangSwitcher />
         </nav>
       )}
