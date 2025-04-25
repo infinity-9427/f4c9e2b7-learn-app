@@ -9,9 +9,10 @@ import toast from "react-hot-toast";
 import { RiEyeLine as Eye, RiEyeOffLine as EyeOff } from "@remixicon/react";
 import Link from "next/link";
 
-export default function Login() {
+export default function Signup() {
   const router = useRouter();
-  const [identifier, setIdentifier] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -31,19 +32,19 @@ export default function Login() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:1337/api/auth/local", {
+      const response = await fetch("http://localhost:1337/api/auth/local/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ identifier, password }),
+        body: JSON.stringify({ username, email, password }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        toast.error(data.error?.message || "Login failed");
-        throw new Error(data.error?.message || "Login failed");
+        toast.error(data.error?.message || "Registration failed");
+        throw new Error(data.error?.message || "Registration failed");
       }
 
       // Store the JWT token securely
@@ -69,7 +70,7 @@ export default function Login() {
         sameSite: "strict"
       });
 
-      setSuccess("Logged in Successfully!");
+      setSuccess("Registered Successfully!");
       toast.success("Redirecting to Profile...");
       setTimeout(() => router.push("/profile"), 1500);
     } catch (err: any) {
@@ -81,20 +82,35 @@ export default function Login() {
     <div className="flex justify-center items-center min-h-screen bg-gray-950 px-4 sm:px-6 md:px-8 lg:px-10">
       <div className="bg-gray-800 p-8 sm:p-10 rounded-lg shadow-xl w-full max-w-md">
         <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-gray-100">
-          Login
+          Sign Up
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="identifier" className="block text-gray-300 font-semibold mb-1">
-              Username or Email
+            <label htmlFor="username" className="block text-gray-300 font-semibold mb-1">
+              Username
             </label>
             <Input
               type="text"
-              placeholder="Enter your username or email"
-              value={identifier}
-              onChange={(e) => setIdentifier(e.target.value)}
+              placeholder="Enter your username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
               autoComplete="username"
+              className="h-12 text-lg bg-gray-900 text-gray-100 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-gray-300 font-semibold mb-1">
+              Email
+            </label>
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              autoComplete="email"
               className="h-12 text-lg bg-gray-900 text-gray-100 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
             />
           </div>
@@ -110,7 +126,7 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                autoComplete="current-password"
+                autoComplete="new-password"
                 className="h-12 text-lg pr-10 bg-gray-900 text-gray-100 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
               />
               <Button
@@ -137,17 +153,17 @@ export default function Login() {
           )}
 
           <Button type="submit" className="w-full h-12 text-lg bg-indigo-600 hover:bg-indigo-700 text-white rounded transition-colors">
-            Login
+            Sign Up
           </Button>
 
           <p className="text-center text-gray-300">
-            Don't have an account?{" "}
-            <Link href="/signup" className="text-indigo-400 hover:text-indigo-300">
-              Sign Up
+            Already have an account?{" "}
+            <Link href="/login" className="text-indigo-400 hover:text-indigo-300">
+              Login
             </Link>
           </p>
         </form>
       </div>
     </div>
   );
-}
+} 

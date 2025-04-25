@@ -1,39 +1,42 @@
-import { Controller, Get, Post, Delete, Param, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Param, HttpCode, HttpStatus, UseGuards } from '@nestjs/common';
 import { FavoritesService } from './favorites.service';
+import { AuthGuard } from '../auth/auth.guard';
+import { User } from '../auth/user.decorator';
 
 @Controller('favorites')
+@UseGuards(AuthGuard)
 export class FavoritesController {
   constructor(private readonly favoritesService: FavoritesService) {}
 
-  @Post(':userId/courses/:courseId')
+  @Post('courses/:courseId')
   @HttpCode(HttpStatus.CREATED)
   async addToFavorites(
-    @Param('userId') userId: string,
+    @User() user: { id: string },
     @Param('courseId') courseId: string,
   ): Promise<void> {
-    await this.favoritesService.addToFavorites(userId, courseId);
+    await this.favoritesService.addToFavorites(user.id, courseId);
   }
 
-  @Delete(':userId/courses/:courseId')
+  @Delete('courses/:courseId')
   @HttpCode(HttpStatus.NO_CONTENT)
   async removeFromFavorites(
-    @Param('userId') userId: string,
+    @User() user: { id: string },
     @Param('courseId') courseId: string,
   ): Promise<void> {
-    await this.favoritesService.removeFromFavorites(userId, courseId);
+    await this.favoritesService.removeFromFavorites(user.id, courseId);
   }
 
-  @Get(':userId/courses')
-  async getFavorites(@Param('userId') userId: string): Promise<string[]> {
-    return await this.favoritesService.getFavorites(userId);
+  @Get('courses')
+  async getFavorites(@User() user: { id: string }): Promise<string[]> {
+    return await this.favoritesService.getFavorites(user.id);
   }
 
-  @Get(':userId/courses/:courseId')
+  @Get('courses/:courseId')
   async isFavorite(
-    @Param('userId') userId: string,
+    @User() user: { id: string },
     @Param('courseId') courseId: string,
   ): Promise<{ isFavorite: boolean }> {
-    const isFavorite = await this.favoritesService.isFavorite(userId, courseId);
+    const isFavorite = await this.favoritesService.isFavorite(user.id, courseId);
     return { isFavorite };
   }
 } 
